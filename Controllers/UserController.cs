@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using ToDo.Models;
 using System.Net.Mail;
+using System.Web.Security;
+
 namespace ToDo.Controllers
 {
     public class UserController : Controller
@@ -173,7 +175,8 @@ namespace ToDo.Controllers
 
                 if (user!=null && user.password==userModel.password)
                 {
-                   return RedirectToAction("Index", "Task", new {id= user.user_id,done=false});
+                    FormsAuthentication.RedirectFromLoginPage(user.name, false);
+                    return RedirectToAction("Index", "Task", new {id= user.user_id,done=false});
                 }
                 else
                 {
@@ -229,6 +232,11 @@ namespace ToDo.Controllers
             return View(userModel);
         }
 
+        public ActionResult LogOff()
+        {
+            FormsAuthentication.SignOut();
 
+            return RedirectToAction("LogOn");
+        }
    }
 }

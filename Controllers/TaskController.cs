@@ -29,7 +29,7 @@ namespace ToDo.Controllers
             if (done==true) return View("Archive");
             return View();
         }
-
+        
         //ARCHIVE
         public ActionResult Archive(int id)
         {
@@ -38,7 +38,7 @@ namespace ToDo.Controllers
 
         //
         // GET: /Task/Details/5
-
+      
         public ActionResult Details(int id)
         {
             var db = new DatabaseDataContext();
@@ -50,7 +50,7 @@ namespace ToDo.Controllers
 
         //
         // GET: /Task/Create
-
+   
         public ActionResult Create()
         {
             return View();
@@ -97,7 +97,7 @@ namespace ToDo.Controllers
         
         //
         // GET: /Task/Edit/5
- 
+   
         public ActionResult Edit(int id)
         {
             var db = new DatabaseDataContext();
@@ -141,7 +141,7 @@ namespace ToDo.Controllers
 
         //
         // GET: /Task/Delete/5
- 
+        
         public ActionResult Delete(int id)
         {
             return View();

@@ -47,7 +47,7 @@
     <p>
         <%: Html.ActionLink("Create new task", "Create") %>
         <%: Html.ActionLink("Archive", "Archive", new {id = 0})%>
-        <%: Html.ActionLink("Exit", "LogOn","User") %>
+        <%: Html.ActionLink("Exit", "LogOff","User") %>
     </p>
 
 </asp:Content>
