@@ -6,6 +6,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+
+
     <h2>Log in</h2>
      <% using (Html.BeginForm()) { %>
         <%: Html.ValidationSummary(true,"Error log in. Please fill the fields correct.")%>
@@ -28,10 +30,13 @@
                     <%: Html.PasswordFor(m => m.password) %>
                 </div>
                 
+                <%: Html.CheckBoxFor(m=>m.remember)%>  Remember me
+
                <p>
                     <input type="submit" value="Log in" />
+
                 </p>
-                    <%:Html.ActionLink("Registration","Create") %>
+                    <%:Html.ActionLink("Registration", "Create")%>
                     <%:Html.ActionLink("Forgot password?", "ReminderPassword") %>
             </fieldset>
         </div>

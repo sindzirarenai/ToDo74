@@ -175,7 +175,7 @@ namespace ToDo.Controllers
 
                 if (user!=null && user.password==userModel.password)
                 {
-                    FormsAuthentication.RedirectFromLoginPage(user.name, false);
+                    FormsAuthentication.RedirectFromLoginPage(user.name, userModel.remember);
                     return RedirectToAction("Index", "Task", new {id= user.user_id,done=false});
                 }
                 else

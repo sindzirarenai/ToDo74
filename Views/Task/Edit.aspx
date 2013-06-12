@@ -8,6 +8,10 @@
 
     <h2>Edit</h2>
 
+ <script src="../../Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery.ui.datepicker.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery.ui.core.min.js" type="text/javascript"></script>
+
     <% using (Html.BeginForm()) {%>
 
         <%: Html.ValidationSummary(true, "Error in edit. Please fill the fields correct")%>
@@ -41,7 +45,12 @@
 
     <% } %>
            
-  
+<script type="text/javascript">
+       $(document).ready(function () {
+           $('#date_plan').datepicker({ firstDay: 1, dateFormat: 'dd.mm.yy' });
+           $('.datePicker').datepicker({ firstDay: 1, dateFormat: 'dd.mm.yy' });
+       });
+</script>
 
 </asp:Content>
 

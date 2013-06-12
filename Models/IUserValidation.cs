@@ -47,7 +47,8 @@ namespace ToDo.Models
                     return true;
 
                 }
-                else return false;
+
+                return false;
             }
             catch
             {

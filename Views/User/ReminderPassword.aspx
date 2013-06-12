@@ -8,6 +8,8 @@
 
     <h2>Please input your email. We will send your password.</h2>
 
+
+
      <% using (Html.BeginForm()) { %>
         <%: Html.ValidationSummary(true,"Error log in. Please fill the fields correct.")%>
         <div>

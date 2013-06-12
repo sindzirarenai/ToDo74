@@ -333,6 +333,7 @@ namespace ToDo.Models
 		
         
 		private string _password;
+
 		
 		private EntitySet<Task> _Tasks;
 		
@@ -438,10 +439,11 @@ namespace ToDo.Models
 				}
 			}
 		}
-//!!!!!!CREATE MYSELF
+//!!!!!!MYSELF
         public string conformPassword { get; set; }
 //!!!!!!!!!!!!!!!!!!
-		
+        public bool remember { get; set; }
+
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_Task", Storage="_Tasks", ThisKey="user_id", OtherKey="user")]
 		public EntitySet<Task> Tasks
 		{

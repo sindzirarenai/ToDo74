@@ -4,9 +4,12 @@
 	Registration
 </asp:Content>
 
+
+
 <asp:Content ID="UserContent" ContentPlaceHolderID="MainContent" runat="server">
 
   <h2>Registration</h2>
+
 
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true,"Error regiatration. Please fill the fields correct.") %>
@@ -15,7 +18,7 @@
             <legend>Fields</legend>
                    
             <div class="editor-label">
-                Name
+                Name*
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.name) %>
@@ -23,7 +26,7 @@
             </div>
             
             <div class="editor-label">
-                Email
+                Email*
             </div>
             <div class="editor-field">
                 <%: Html.TextBoxFor(model => model.email) %>
@@ -31,7 +34,7 @@
             </div>
             
             <div class="editor-label">
-                Password
+                Password*
             </div>
             <div class="editor-field">
                 <%: Html.PasswordFor(model => model.password) %>
@@ -39,7 +42,7 @@
             </div>
 
             <div class="editor-label">
-                <%: Html.Label("Conform password") %>
+                <%: Html.Label("Conform password*")%>
             </div>
             <div class="editor-field">
                 <%: Html.PasswordFor(model => model.conformPassword) %>
